@@ -6,10 +6,6 @@
 //  Copyright © 2017年 Life is Tech!. All rights reserved.
 //
 
-//                                  //
-//  This App is for iPhone 11Pro    //
-//                                  //
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -24,31 +20,16 @@ class ViewController: UIViewController {
         
     }
     
-    // 3の倍数と3がつくかは全く別物なので、３の倍数の時と３がつくときの処理で分ける
     func isAho() -> Bool {
         
-        if number % 3 == 0 {    // 3の倍数かどうか調べる
+        if number % 3 == 0 {
 
             return true
 
-//        } else if number % 10 == 3 {    // 1の位が3かどうか調べる
-//
-//            return true
-//
-//        } else if number / 10 % 10 == 3 {// 10の位が3かどうか調べる
-//
-//            return true
-//
         } else {
 
-        // 3がつくかどうかを調べるためにcheckNumに一度代入する
-        // numberのままであると　whileの処理の中で　3の倍数、または3がつく数　以外は0になる
-        // 0の次の1になった時、whileの中の処理でplusbutton関数にnumberが渡される時には0になっているので永遠と1から数が上昇しない
-        // つまり、plusbuttonを押しても1から数が上昇しない.
-            
         checkNum = number
         
-        // 問題4: 3がつくかどうか調べる
             while checkNum != 0 {
 
                 if  checkNum % 10 == 3 {
